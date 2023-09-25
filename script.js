@@ -12,12 +12,12 @@ const isTouchDevice = () => {
 
     document.createEvent("TouchEvent");
     return true;
-  } catch (e) {
+  } catch ( e ) {
     return false;
   }
 };
 
-const randomNumber = () => Math.floor(Math.random() * 8) + 1;
+const randomNumber = () =>  Math.floor(Math.random() * 8) + 1;
 
 const getCoords = (element) => {
   const [row, col] = element.getAttribute("data-position").split("_");
@@ -69,7 +69,7 @@ const gridGenerator = () => {
 };
 
 const selectImage = (e) => {
-  e.preventDefault();
+  e.preventDefault( );
   
   currentElement = e.target;
   
@@ -105,12 +105,12 @@ const selectImage = (e) => {
    
         coverScreen.classList.remove("hide");
         container.classList.add("hide");
-        result.innerText = `Total Moves: ${movesCount}`;
-        startButton.innerText = "RestartGame";
+        result.innerText = `Movimentos: ${movesCount}`;
+        startButton.innerText = "Reiniciar Jogo?";
       }, 1000);
     }
     movesCount += 1;
-    moves.innerText = `Moves: ${movesCount}`;
+    moves.innerText = `Movimentos: ${movesCount}`;
   }
 };
 
@@ -122,7 +122,7 @@ startButton.addEventListener("click", () => {
   randomImages();
   gridGenerator();
   movesCount = 0;
-  moves.innerText = `Moves: ${movesCount}`;
+  moves.innerText = `Movimentos: ${movesCount}`;
 });
 
 
