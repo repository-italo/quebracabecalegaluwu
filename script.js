@@ -5,6 +5,7 @@ const startButton = document.getElementById("start-button");
 const coverScreen = document.querySelector(".cover-screen");
 const result = document.getElementById("result");
 const timer = document.getElementById("timer");
+timer.innerText = "Timer:";
 let currentElement = "";
 let movesCount,
   imagesArr = [];
