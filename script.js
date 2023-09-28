@@ -4,6 +4,7 @@ const container = document.querySelector(".container");
 const startButton = document.getElementById("start-button");
 const coverScreen = document.querySelector(".cover-screen");
 const result = document.getElementById("result");
+const timer = document.getElementById("timer");
 let currentElement = "";
 let movesCount,
   imagesArr = [];
@@ -130,7 +131,7 @@ const timergame = () =>{
       }else{
          const minutes = Math.floor(remainingTime/60000);
          const seconds = (remainingTime% 60000)/1000;
-       console.log(`Seu tempo é de ${minutes}: ${seconds}`);
+         timer.innerText = `${minutes} : ${seconds}`
       }
 
    }, 1000)

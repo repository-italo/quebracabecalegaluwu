@@ -53,6 +53,12 @@
    margin: 1em;
    text-align: right;
  }
+
+ #timer{
+   position:relative;
+   margin: 8em;
+   text-align: right;
+ }
  .hide {
    display: none;
  }
