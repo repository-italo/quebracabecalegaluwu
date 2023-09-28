@@ -113,7 +113,29 @@ const selectImage = (e) => {
     moves.innerText = `Movimentos: ${movesCount}`;
   }
 };
+const timergame = () =>{
+   const duracao = 5 * 60 * 1000;
 
+   const startTime = Date.now();
+
+   const endTime = startTime+duracao;
+
+   const timerInterval =setInterval(() =>{
+      const currentTime = Date.now();
+
+      const remainingTime = endTime - currentTime;
+
+      if(remainingTime <=0){
+         clearInterval(timerInterval);
+      }else{
+         const minutes = Math.floor(remainingTime/60000);
+         const seconds = (remainingTime% 60000)/1000;
+       console.log(`Seu tempo é de ${minutes}: ${seconds}`);
+      }
+
+   }, 1000)
+   
+};
 startButton.addEventListener("click", () => {
   container.classList.remove("hide");
   coverScreen.classList.add("hide");
@@ -121,8 +143,9 @@ startButton.addEventListener("click", () => {
   imagesArr = [];
   randomImages();
   gridGenerator();
+  timergame();
   movesCount = 0;
-  moves.innerText = `Movimentos: ${movesCount}`;
+  moves.innerText = `Movimentos: ${movesCount}<br> Timer: `;
 });
 
 
