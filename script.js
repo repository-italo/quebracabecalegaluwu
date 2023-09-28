@@ -131,7 +131,7 @@ const timergame = () =>{
       }else{
          const minutes = Math.floor(remainingTime/60000);
          const seconds = (remainingTime% 60000)/1000;
-         timer.innerText = `${minutes} : ${seconds}`
+         timer.innerText = `${minutes} : ${seconds}`;
       }
 
    }, 1000)
@@ -146,7 +146,7 @@ startButton.addEventListener("click", () => {
   gridGenerator();
   timergame();
   movesCount = 0;
-  moves.innerText = `Movimentos: ${movesCount}<br> Timer: `;
+  moves.innerText = `Movimentos: ${movesCount}`;
 });
 
 
