@@ -56,7 +56,7 @@
 
  #timer{
    position:relative;
-   margin: 8em;
+   margin: 1em 8em 1em 0;
    text-align: right;
  }
  .hide {

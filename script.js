@@ -128,10 +128,12 @@ const timergame = () =>{
 
       if(remainingTime <=0){
          clearInterval(timerInterval);
+         alert("Seu tempo acabou, Lamento");
+         window.location.reload();
       }else{
          const minutes = Math.floor(remainingTime/60000);
-         const seconds = (remainingTime% 60000)/1000;
-         timer.innerText = `${minutes} : ${seconds}`;
+         const seconds = Math.floor((remainingTime% 60000)/1000);
+         timer.innerText = `Timer: ${minutes} : ${seconds}`;
       }
 
    }, 1000)
