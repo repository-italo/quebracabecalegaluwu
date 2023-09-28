@@ -115,7 +115,7 @@ const selectImage = (e) => {
   }
 };
 const timergame = () =>{
-   const duracao = 5 * 60 * 1000;
+   const duracao = 5 * 30 * 1000;
 
    const startTime = Date.now();
 
@@ -132,7 +132,7 @@ const timergame = () =>{
          window.location.reload();
       }else{
          const minutes = Math.floor(remainingTime/60000);
-         const seconds = Math.floor((remainingTime% 60000)/1000);
+         const seconds = Math.round((remainingTime% 60000)/1000);
          timer.innerText = `Timer: ${minutes} : ${seconds}`;
       }
 
@@ -152,7 +152,9 @@ startButton.addEventListener("click", () => {
 });
 
 
-window.onload = () => {
+
+  window.onload = () => {
   coverScreen.classList.remove("hide");
   container.classList.add("hide");
+
 };
