@@ -55,7 +55,7 @@
  }
 
  #timer{
-   position:relative;
+   position:absolute;
    margin-right: 1em;
    margin-top: 1.75em;
    text-align: right;
