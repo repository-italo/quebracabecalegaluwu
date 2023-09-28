@@ -6,6 +6,7 @@ const coverScreen = document.querySelector(".cover-screen");
 const result = document.getElementById("result");
 const timer = document.getElementById("timer");
 timer.innerText = "Timer:";
+timer.classList.add("hide");
 let currentElement = "";
 let movesCount,
   imagesArr = [];
@@ -132,6 +133,7 @@ const timergame = () =>{
          alert("Seu tempo acabou, Lamento");
          window.location.reload();
       }else{
+         timer.classList.remove("hide");
          const minutes = Math.floor(remainingTime/60000);
          const seconds = Math.round((remainingTime% 60000)/1000);
          timer.innerText = `Timer: ${minutes} : ${seconds}`;
